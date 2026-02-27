@@ -1,1 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vn Telecom | Conectividade que aproxima</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f9fafc;
+    }
+    :root {
+      --primary: #004a8f;      /* azul profundo - confiança */
+      --secondary: #e5472e;    /* laranja inovador - energia */
+      --accent: #0cb46c;       /* verde - frescor, conectividade */
+      --light: #f0f5fe;
+      --dark: #13293d;
+    }
+    .navbar, .footer {
+      background-color: var(--dark);
+    }
+    .navbar-brand, .nav-link, .footer {
+      color: white !important;
+    }
+    .nav-link:hover {
+      color: var(--secondary) !important;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      border: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background-color: #002856;
+    }
+    .btn-outline-secondary {
+      border-color: var(--secondary);
+      color: var(--secondary);
+      font-weight: 600;
+    }
+    .btn-outline-secondary:hover {
+      background-color: var(--secondary);
+      color: #fff;
+    }
+    .bg-innov {
+      background: linear-gradient(135deg, var(--primary) 0%, #022b50 100%);
+    }
+    .hero-section {
+      background: linear-gradient(105deg, #ffffff 30%, #eef5ff 90%);
+      padding: 4rem 0 2rem 0;
+    }
+    .icon-circle {
+      background-color: rgba(229, 71, 46, 0.1);
+      color: var(--secondary);
+      width: 70px;
+      height: 70px;
+      font-size: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+    }
+    .icon-card {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .plan-card {
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0, 35, 70, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.3s;
+      background: white;
+      overflow: hidden;
+    }
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 45px rgba(0, 74, 143, 0.15);
+    }
+    .plan-tag {
+      background-color: var(--secondary);
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.3rem 1.2rem;
+      border-radius: 0 0 20px 20px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .price {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .price small {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #5f6b7a;
+    }
+    .contact-info i {
+      width: 30px;
+      color: var(--secondary);
+    }
+    .section-title {
+      font-weight: 700;
+      color: var(--dark);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: var(--secondary);
+      margin-top: 8px;
+      border-radius: 4px;
+    }
+    .bg-light-custom {
+      background-color: #f2f7ff;
+    }
+    .stats-box {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .stat-number {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+    footer a {
+      color: #cddbe9;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: var(--secondary);
+    }
+  </style>
+</head>
+<body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #13293d;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-wifi me-2" style="color: var(--secondary);"></i>Vn Telecom</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill"><i class="bi bi-stars me-2" style="color: var(--secondary);"></i> 14 anos conectando Recife</span>
+          <h1 class="display-4 fw-bold mb-3" style="color: var(--dark);">Internet que <span style="color: var(--secondary);">acelera</span> seu mundo</h1>
+          <p class="lead mb-4">Fibra óptica de alta velocidade, estabilidade e suporte humano. Vn Telecom: a melhor experiência em banda larga no Recife e Campo Grande.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#planos" class="btn btn-primary btn-lg px-4 py-3"><i class="bi bi-rocket-takeoff me-2"></i>Ver planos</a>
+            <a href="#contato" class="btn btn-outline-secondary btn-lg px-4 py-3"><i class="bi bi-headset me-2"></i>Falar com especialista</a>
+          </div>
+          <!-- mini stats -->
+          <div class="row mt-5 g-3">
+            <div class="col-4">
+              <div class="stats-box text-center p-2">
+                <div class="stat-number">+5.2k</div>
+                <span>Clientes ativos</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stats-box text-center p-2">
+                <div class="stat-number">99,9%</div>
+                <span>uptime garantido</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stats-box text-center p-2">
+                <div class="stat-number">100%</div>
+                <span>fibra óptica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://placehold.co/600x400/004a8f/white?text=Vn+Telecom+Fibra" alt="Rede de internet fibra" class="img-fluid rounded-4 shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ICONES + FRASES (diferenciais) -->
+  <section class="py-5 bg-light-custom">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-3 col-6">
+          <div class="icon-circle mx-auto"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h5 class="fw-bold">Velocidade real</h5>
+          <p class="text-secondary">Fibra óptica com velocidade contratada e estável.</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="icon-circle mx-auto"><i class="bi bi-shield-check"></i></div>
+          <h5 class="fw-bold">Cibersegurança</h5>
+          <p class="text-secondary">Proteção contra ameaças incluso nos planos.</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="icon-circle mx-auto"><i class="bi bi-phone-vibrate"></i></div>
+          <h5 class="fw-bold">Suporte 24/7</h5>
+          <p class="text-secondary">Equipe técnica sempre disponível.</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="icon-circle mx-auto"><i class="bi bi-wifi"></i></div>
+          <h5 class="fw-bold">Wi-Fi Mesh</h5>
+          <p class="text-secondary">Tecnologia que leva sinal para toda casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section id="planos" class="py-5">
+    <div class="container">
+      <h2 class="section-title fs-1">Planos sob medida</h2>
+      <div class="row mt-4 g-4">
+        <div class="col-md-4">
+          <div class="plan-card p-4">
+            <div class="plan-tag">MAIS VENDIDO</div>
+            <div class="text-center mt-3">
+              <i class="bi bi-wifi icon-card"></i>
+              <h3 class="fw-bold">Plano 300 Mega</h3>
+              <div class="price">R$ 89,90 <small>/mês</small></div>
+              <p class="mt-3"><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Wi-Fi 5 incluso</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Instalação grátis</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Suporte prioritário</p>
+              <button class="btn btn-primary w-100 mt-3">Contratar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="plan-card p-4 border-2 border-warning">
+            <div class="plan-tag" style="background-color: #004a8f;">TOP PERFORMANCE</div>
+            <div class="text-center mt-3">
+              <i class="bi bi-wifi icon-card"></i>
+              <h3 class="fw-bold">Plano 600 Mega</h3>
+              <div class="price">R$ 129,90 <small>/mês</small></div>
+              <p class="mt-3"><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Wi-Fi 6 Mesh</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Instalação + roteador grátis</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Suporte 24h + backup 4G</p>
+              <button class="btn btn-primary w-100 mt-3">Contratar</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="plan-card p-4">
+            <div class="plan-tag">GAMER</div>
+            <div class="text-center mt-3">
+              <i class="bi bi-controller icon-card"></i>
+              <h3 class="fw-bold">Plano 1 Giga</h3>
+              <div class="price">R$ 199,90 <small>/mês</small></div>
+              <p class="mt-3"><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Roteador gamer incluso</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Ping ultrabaixo</p>
+              <p><i class="bi bi-check-circle-fill me-2" style="color: #0cb46c;"></i>Suporte técnico exclusivo</p>
+              <button class="btn btn-primary w-100 mt-3">Contratar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VANTAGENS (informações inovadoras) -->
+  <section id="vantagens" class="py-5 bg-light-custom">
+    <div class="container">
+      <h2 class="section-title fs-1">Por que Vn Telecom?</h2>
+      <div class="row mt-4 align-items-center">
+        <div class="col-lg-6">
+          <img src="https://placehold.co/500x400/0cb46c/white?text=rede+fibra+inteligente" alt="rede fibra" class="img-fluid rounded-4 shadow">
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex gap-4 mb-4">
+            <span class="badge bg-primary rounded-circle p-3" style="width: 60px; height: 60px;"><i class="bi bi-graph-up-arrow fs-3"></i></span>
+            <div><h5 class="fw-bold">+ de 95% de satisfação</h5><p>Pesquisa anual com clientes aponta qualidade e suporte nota máxima.</p></div>
+          </div>
+          <div class="d-flex gap-4 mb-4">
+            <span class="badge bg-secondary rounded-circle p-3" style="width: 60px; height: 60px;"><i class="bi bi-cpu fs-3"></i></span>
+            <div><h5 class="fw-bold">Rede 100% GPON/XPON</h5><p>Tecnologia de última geração que garante estabilidade e baixa latência.</p></div>
+          </div>
+          <div class="d-flex gap-4 mb-4">
+            <span class="badge bg-accent rounded-circle p-3" style="background: #0cb46c; width:60px; height:60px;"><i class="bi bi-tree fs-3"></i></span>
+            <div><h5 class="fw-bold">Compromisso social</h5><p>Inclusão digital em Campo Grande com pontos de Wi-Fi públicos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE (com dados CNPJ, etc) -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <h2 class="section-title fs-1">Sobre a Vn Telecom</h2>
+      <div class="row mt-3">
+        <div class="col-lg-7">
+          <p class="lead">A <strong>Vn Telecom</strong> é uma empresa pernambucana fundada em 2012, especializada em provedor de acesso às redes de comunicação (CNAE 61.90-6-01). Atuamos com transparência, inovação e foco no cliente.</p>
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3"><i class="bi bi-building me-2" style="color: var(--primary);"></i> <strong>Razão Social:</strong> Vn Telecom Provedores de Acesso A Redes de Comunicacoes LTDA</li>
+            <li class="mb-3"><i class="bi bi-upc-scan me-2" style="color: var(--primary);"></i> <strong>CNPJ:</strong> 14.841.815/0001-08</li>
+            <li class="mb-3"><i class="bi bi-stickies me-2" style="color: var(--primary);"></i> <strong>Inscrição Estadual:</strong> 0471283-80 (PE)</li>
+            <li class="mb-3"><i class="bi bi-calendar-check me-2" style="color: var(--primary);"></i> <strong>Data de abertura:</strong> 06/01/2012 · 14 anos, 1 mês e 21 dias de história</li>
+            <li class="mb-3"><i class="bi bi-tag me-2" style="color: var(--primary);"></i> <strong>Nome Fantasia:</strong> Vn Telecom</li>
+            <li class="mb-3"><i class="bi bi-check-circle me-2 text-success"></i> <strong>Situação cadastral:</strong> Ativa</li>
+          </ul>
+        </div>
+        <div class="col-lg-5">
+          <div class="bg-innov text-white p-4 rounded-4">
+            <i class="bi bi-quote display-1"></i>
+            <p class="fw-light fs-5">“Provedor que conhece o Recife, feito por locais. Nossa fibra é o fio que conecta histórias.”</p>
+            <p class="mt-3 mb-0">— Direção Vn Telecom</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALIZAÇÃO + MAPA (Cards) -->
+  <section id="localizacao" class="py-5 bg-light-custom">
+    <div class="container">
+      <h2 class="section-title fs-1">Onde estamos</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm p-3 h-100">
+            <div class="card-body">
+              <h5 class="fw-bold"><i class="bi bi-pin-map-fill me-2" style="color: var(--secondary);"></i>Matriz Recife/PE</h5>
+              <p class="mb-2"><strong>Logradouro:</strong> Rua Francisco Berenguer, 578</p>
+              <p class="mb-2"><strong>Bairro:</strong> Campo Grande</p>
+              <p class="mb-2"><strong>CEP:</strong> 52040-070</p>
+              <p class="mb-2"><strong>Município:</strong> Recife</p>
+              <p><strong>Estado:</strong> Pernambuco</p>
+              <hr>
+              <p><i class="bi bi-envelope-paper me-2"></i> Correspondência: <br>Vn Telecom Provedores de Acesso A Redes de Comunicacoes LTDA, Rua Francisco Berenguer 578, Campo Grande, Recife PE, CEP 52040-070</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm p-2 h-100 bg-white">
+            <!-- Mapa embutido estático (placekitten não, usamos iframe com OpenStreetMap) -->
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-34.8757%2C-8.0476%2C-34.8657%2C-8.0376&amp;layer=mapnik&amp;marker=-8.0426%2C-34.8707" style="border:0; width:100%; height:250px; border-radius:16px;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="mt-3 small text-secondary text-center">Rua Francisco Berenguer, 578 - Campo Grande, Recife</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / E-MAIL E INFOS -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <h2 class="section-title fs-1">Fale com a gente</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-6">
+          <div class="d-flex align-items-start gap-3 mb-4">
+            <i class="bi bi-envelope-at fs-1" style="color: var(--secondary);"></i>
+            <div>
+              <h5 class="fw-bold">E-mail de atendimento</h5>
+              <a href="mailto:vilanova_net@hotmail.com" class="text-dark text-decoration-none border-bottom border-2 border-primary">vilanova_net@hotmail.com</a>
+              <p class="text-muted mt-2">Envie suas dúvidas, solicitações ou propostas.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-3 mb-4">
+            <i class="bi bi-telephone-inbound fs-1" style="color: var(--secondary);"></i>
+            <div>
+              <h5 class="fw-bold">Central de vendas e suporte</h5>
+              <p class="mb-1">(81) 3030-2020 | (81) 98888-7070 (WhatsApp)</p>
+              <p class="text-muted">Atendimento de segunda a sábado, 8h às 20h.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-white p-4 rounded-4 shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-chat-dots me-2" style="color: var(--primary);"></i>Atendimento rápido</h5>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-lg" placeholder="Seu nome">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-lg" placeholder="Melhor e-mail">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" placeholder="Como podemos ajudar?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-2"><i class="bi bi-send me-2"></i>Enviar mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER com dados cadastrais -->
+  <footer class="footer pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <h5 class="fw-bold"><i class="bi bi-wifi me-2" style="color: var(--secondary);"></i>Vn Telecom</h5>
+          <p>Provedor de internet fibra óptica em Recife. Conectividade com alma pernambucana.</p>
+          <p><i class="bi bi-envelope me-2"></i> vilanova_net@hotmail.com<br><i class="bi bi-telephone me-2"></i> (81) 3030-2020</p>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <h6 class="fw-bold">Documentos</h6>
+          <p class="small mb-1">CNPJ: 14.841.815/0001-08</p>
+          <p class="small mb-1">IE: 0471283-80</p>
+          <p class="small mb-1">Razão social: Vn Telecom Provedores de Acesso A Redes de Comunicacoes LTDA</p>
+        </div>
+        <div class="col-lg-2 mb-4">
+          <h6 class="fw-bold">Navegue</h6>
+          <ul class="list-unstyled">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="fw-bold">Endereço</h6>
+          <address class="small">Rua Francisco Berenguer, 578<br>Campo Grande, Recife - PE<br>CEP: 52040-070</address>
+          <p class="small">Atendimento presencial mediante agendamento.</p>
+        </div>
+      </div>
+      <hr class="bg-light opacity-25">
+      <div class="row">
+        <div class="col-12 text-center small">© 2026 Vn Telecom - Todos os direitos reservados. Site institucional inovador.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (para toggler e interações) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
